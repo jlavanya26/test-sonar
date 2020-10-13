@@ -1,0 +1,13 @@
+    pipline
+    {
+        agent any
+        stage('Checkout sample project') {
+        steps {
+            git branch: 'main',
+                credentialsId: 'jlavanya26',
+                url: 'ssh://git@test.com/proj/test_proj.git'
+
+            sh "ls -lat"
+        }
+    }
+    }
